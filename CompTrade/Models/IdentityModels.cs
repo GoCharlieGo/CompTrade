@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 
 namespace CompTrade.Models
 {
@@ -16,12 +17,12 @@ namespace CompTrade.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public virtual ICollection<UserProfile> UserProfiles { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+        public ApplicationDbContext(): base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
@@ -29,5 +30,7 @@ namespace CompTrade.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<UserProfile> UserProfiles { get; set; }
     }
 }
