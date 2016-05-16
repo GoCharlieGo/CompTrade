@@ -83,3 +83,4 @@ C:\Users\USER\Documents\Visual Studio 2015\Projects\CompTrade\CompTrade\obj\Debu
 C:\Users\USER\Documents\Visual Studio 2015\Projects\CompTrade\CompTrade\obj\Debug\CompTrade.Migrations.InitialCreate.resources
 C:\Users\USER\Documents\Visual Studio 2015\Projects\CompTrade\CompTrade\obj\Debug\CompTrade.csproj.GenerateResource.Cache
 C:\Users\USER\Documents\Visual Studio 2015\Projects\CompTrade\CompTrade\obj\Debug\CompTrade.Migrations.UserProfile.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\CompTrade\CompTrade\obj\Debug\CompTrade.Migrations.YEBEKE.resources

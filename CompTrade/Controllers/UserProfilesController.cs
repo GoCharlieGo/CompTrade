@@ -7,11 +7,26 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CompTrade.Models;
+using Microsoft.AspNet.Identity;
 
 namespace CompTrade.Controllers
 {
     public class UserProfilesController : Controller
     {
+
+        public UserProfilesController()
+        {
+        }
+
+        public UserProfilesController(string Id)
+        {
+                db.UserProfiles.Add(new UserProfile()
+                {
+                    UserId = Id
+                });
+                db.SaveChanges();
+        } 
+
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: UserProfiles
@@ -20,6 +35,16 @@ namespace CompTrade.Controllers
             var userProfiles = db.UserProfiles.Include(u => u.User);
             return View(userProfiles.ToList());
         }
+
+        //public ActionResult Details()
+        //{
+        //    UserProfile userProfile = db.UserProfiles.FirstOrDefault(item => item.UserId == User.Identity.GetUserId());
+        //    if (userProfile == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(userProfile);
+        //}
 
         // GET: UserProfiles/Details/5
         public ActionResult Details(int? id)
@@ -35,6 +60,7 @@ namespace CompTrade.Controllers
             }
             return View(userProfile);
         }
+
 
         // GET: UserProfiles/Create
         public ActionResult Create()

@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201605151757593_UserProfile.Designer.cs">
       <DependentUpon>201605151757593_UserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605161055360_YEBEKE.cs" />
+    <Compile Include="Migrations\201605161055360_YEBEKE.Designer.cs">
+      <DependentUpon>201605161055360_YEBEKE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -305,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605151757593_UserProfile.resx">
       <DependentUpon>201605151757593_UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605161055360_YEBEKE.resx">
+      <DependentUpon>201605161055360_YEBEKE.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
