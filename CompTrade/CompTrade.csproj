@@ -196,8 +196,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IconsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductIconsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ProductSpecificationsController.cs" />
+    <Compile Include="Controllers\SpecificationsController.cs" />
     <Compile Include="Controllers\UserProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -297,9 +303,41 @@
     <Content Include="Views\UserProfile\Details.cshtml" />
     <Content Include="Views\UserProfile\Edit.cshtml" />
     <Content Include="Views\UserProfile\Index.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\Delete.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Icons\Create.cshtml" />
+    <Content Include="Views\Icons\Delete.cshtml" />
+    <Content Include="Views\Icons\Details.cshtml" />
+    <Content Include="Views\Icons\Edit.cshtml" />
+    <Content Include="Views\Icons\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Specifications\Create.cshtml" />
+    <Content Include="Views\Specifications\Delete.cshtml" />
+    <Content Include="Views\Specifications\Details.cshtml" />
+    <Content Include="Views\Specifications\Edit.cshtml" />
+    <Content Include="Views\Specifications\Index.cshtml" />
+    <Content Include="Views\ProductIcons\Create.cshtml" />
+    <Content Include="Views\ProductIcons\Delete.cshtml" />
+    <Content Include="Views\ProductIcons\Details.cshtml" />
+    <Content Include="Views\ProductIcons\Edit.cshtml" />
+    <Content Include="Views\ProductIcons\Index.cshtml" />
+    <Content Include="Views\ProductSpecifications\Create.cshtml" />
+    <Content Include="Views\ProductSpecifications\Delete.cshtml" />
+    <Content Include="Views\ProductSpecifications\Details.cshtml" />
+    <Content Include="Views\ProductSpecifications\Edit.cshtml" />
+    <Content Include="Views\ProductSpecifications\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\ProductIcons\" />
+    <Folder Include="Content\UserIcons\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
