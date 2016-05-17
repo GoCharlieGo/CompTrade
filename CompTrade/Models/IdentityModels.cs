@@ -31,5 +31,11 @@ namespace CompTrade.Models
             return new ApplicationDbContext();
         }
         public DbSet<UserProfile> UserProfile { get; set; }
+        public DbSet<Category> Categoryes{ get; set; }
+        public DbSet<Specification> Specifications { get; set; }
+        public DbSet<Product> Products{ get; set; }
+        public DbSet<ProductSpecification> ProductSpecifications{ get; set; }
+        public DbSet<Icon> Icon { get; set; }
+        public DbSet<ProductIcon> ProductIcon{ get; set; }
     }
 }

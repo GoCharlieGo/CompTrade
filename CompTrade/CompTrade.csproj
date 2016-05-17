@@ -210,10 +210,20 @@
     <Compile Include="Migrations\201605162340256_UserProfile.Designer.cs">
       <DependentUpon>201605162340256_UserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605171941511_ProductModels.cs" />
+    <Compile Include="Migrations\201605171941511_ProductModels.Designer.cs">
+      <DependentUpon>201605171941511_ProductModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Icon.cs" />
+    <Compile Include="Models\ProductIcon.cs" />
+    <Compile Include="Models\ProductSpecification.cs" />
+    <Compile Include="Models\Specification.cs" />
     <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -305,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605162340256_UserProfile.resx">
       <DependentUpon>201605162340256_UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605171941511_ProductModels.resx">
+      <DependentUpon>201605171941511_ProductModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -252,3 +252,4 @@ C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.Migrations.UserP
 C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.csproj.GenerateResource.Cache
 C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.dll
 C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.pdb
+C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.Migrations.ProductModels.resources
