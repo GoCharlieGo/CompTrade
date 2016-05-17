@@ -333,6 +333,7 @@
     <Content Include="Views\ProductSpecifications\Details.cshtml" />
     <Content Include="Views\ProductSpecifications\Edit.cshtml" />
     <Content Include="Views\ProductSpecifications\Index.cshtml" />
+    <Content Include="Views\Categories\_IndexPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

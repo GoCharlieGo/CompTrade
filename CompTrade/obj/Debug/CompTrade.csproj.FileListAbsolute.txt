@@ -253,3 +253,4 @@ C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.csproj.GenerateR
 C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.dll
 C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.pdb
 C:\Users\USER\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.Migrations.ProductModels.resources
+C:\Users\Charlie\Documents\CompTrade\CompTrade\obj\Debug\CompTrade.Migrations.ProductModels.resources

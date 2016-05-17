@@ -1,0 +1,7 @@
+﻿@model IEnumerable<CompTrade.Models.Category>
+
+@foreach (var item in Model)
+{
+    <a href="#" class="list-group-item">@Html.DisplayFor(modelItem => item.CategoryName)</a>
+}
+
