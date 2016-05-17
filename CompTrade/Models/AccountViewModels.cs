@@ -49,9 +49,8 @@ namespace CompTrade.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Почтовый адрес")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Логин")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
