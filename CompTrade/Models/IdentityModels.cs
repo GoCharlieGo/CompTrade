@@ -16,6 +16,7 @@ namespace CompTrade.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public virtual UserProfile UserProfile { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -29,5 +30,6 @@ namespace CompTrade.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<UserProfile> UserProfile { get; set; }
     }
 }
