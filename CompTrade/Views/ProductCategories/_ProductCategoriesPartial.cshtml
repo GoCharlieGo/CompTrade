@@ -1,0 +1,7 @@
+﻿@model IEnumerable<CompTrade.Models.ProductCategory>
+
+@foreach (var item in Model)
+{    
+    @Html.ActionLink(item.Name, "Index", "Products", new { id = item.ProductId }, new { @class="list-group-item" });
+}
+

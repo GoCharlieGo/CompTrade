@@ -26,6 +26,15 @@ namespace CompTrade.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.ProductCategory",
+                c => new
+                    {
+                        ProductId = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.ProductId);
+            
+            CreateTable(
                 "dbo.ProductIcon",
                 c => new
                     {
@@ -49,8 +58,11 @@ namespace CompTrade.Migrations
                         ShortDiscription = c.String(),
                         Rating = c.Double(nullable: false),
                         RatingCount = c.Int(nullable: false),
+                        ProductCategoryId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.ProductCategory", t => t.ProductCategoryId, cascadeDelete: true)
+                .Index(t => t.ProductCategoryId);
             
             CreateTable(
                 "dbo.ProductSpecification",
@@ -87,16 +99,19 @@ namespace CompTrade.Migrations
             DropForeignKey("dbo.Specification", "CategoryId", "dbo.Category");
             DropForeignKey("dbo.ProductSpecification", "ProductId", "dbo.Product");
             DropForeignKey("dbo.ProductIcon", "ProductId", "dbo.Product");
+            DropForeignKey("dbo.Product", "ProductCategoryId", "dbo.ProductCategory");
             DropForeignKey("dbo.ProductIcon", "IconId", "dbo.Icon");
             DropIndex("dbo.Specification", new[] { "CategoryId" });
             DropIndex("dbo.ProductSpecification", new[] { "SpecificationId" });
             DropIndex("dbo.ProductSpecification", new[] { "ProductId" });
+            DropIndex("dbo.Product", new[] { "ProductCategoryId" });
             DropIndex("dbo.ProductIcon", new[] { "IconId" });
             DropIndex("dbo.ProductIcon", new[] { "ProductId" });
             DropTable("dbo.Specification");
             DropTable("dbo.ProductSpecification");
             DropTable("dbo.Product");
             DropTable("dbo.ProductIcon");
+            DropTable("dbo.ProductCategory");
             DropTable("dbo.Icon");
             DropTable("dbo.Category");
         }

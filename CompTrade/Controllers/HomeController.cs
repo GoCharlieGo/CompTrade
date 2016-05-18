@@ -12,7 +12,7 @@ namespace CompTrade.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
-            return View(db.Categoryes.ToList());
+            return View(db.ProductCategories.ToList());
         }
 
         public ActionResult About()

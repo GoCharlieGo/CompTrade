@@ -200,6 +200,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IconsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductCategoriesController.cs" />
     <Compile Include="Controllers\ProductIconsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProductSpecificationsController.cs" />
@@ -216,9 +217,9 @@
     <Compile Include="Migrations\201605162340256_UserProfile.Designer.cs">
       <DependentUpon>201605162340256_UserProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605171941511_ProductModels.cs" />
-    <Compile Include="Migrations\201605171941511_ProductModels.Designer.cs">
-      <DependentUpon>201605171941511_ProductModels.cs</DependentUpon>
+    <Compile Include="Migrations\201605180056535_ProductModels.cs" />
+    <Compile Include="Migrations\201605180056535_ProductModels.Designer.cs">
+      <DependentUpon>201605180056535_ProductModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -227,6 +228,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Icon.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Models\ProductIcon.cs" />
     <Compile Include="Models\ProductSpecification.cs" />
     <Compile Include="Models\Specification.cs" />
@@ -334,6 +336,12 @@
     <Content Include="Views\ProductSpecifications\Edit.cshtml" />
     <Content Include="Views\ProductSpecifications\Index.cshtml" />
     <Content Include="Views\Categories\_IndexPartial.cshtml" />
+    <Content Include="Views\ProductCategories\Create.cshtml" />
+    <Content Include="Views\ProductCategories\Delete.cshtml" />
+    <Content Include="Views\ProductCategories\Details.cshtml" />
+    <Content Include="Views\ProductCategories\Edit.cshtml" />
+    <Content Include="Views\ProductCategories\Index.cshtml" />
+    <Content Include="Views\ProductCategories\_ProductCategoriesPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -355,8 +363,8 @@
     <EmbeddedResource Include="Migrations\201605162340256_UserProfile.resx">
       <DependentUpon>201605162340256_UserProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605171941511_ProductModels.resx">
-      <DependentUpon>201605171941511_ProductModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605180056535_ProductModels.resx">
+      <DependentUpon>201605180056535_ProductModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

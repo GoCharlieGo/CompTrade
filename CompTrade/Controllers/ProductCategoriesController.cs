@@ -10,120 +10,107 @@ using CompTrade.Models;
 
 namespace CompTrade.Controllers
 {
-    public class ProductsController : Controller
+    public class ProductCategoriesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Products
-        public ActionResult Index(int? id)
+        // GET: ProductCategories
+        public ActionResult Index()
         {
-            if (id == null)
-            {
-                var products = db.Products.Include(p => p.ProductCategory);
-                return View(products.ToList());
-            }
-            else
-            {
-                var products = db.Products.Include(p => p.ProductCategory).Where(p=> p.ProductCategoryId==id);
-                return View(products.ToList());
-            }
+            return View(db.ProductCategories.ToList());
         }
 
-        // GET: Products/Details/5
+        // GET: ProductCategories/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Products.Find(id);
-            if (product == null)
+            ProductCategory productCategory = db.ProductCategories.Find(id);
+            if (productCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(product);
+            return View(productCategory);
         }
 
-        // GET: Products/Create
+        // GET: ProductCategories/Create
         public ActionResult Create()
         {
-            ViewBag.ProductCategoryId = new SelectList(db.ProductCategories, "ProductId", "Name");
             return View();
         }
 
-        // POST: Products/Create
+        // POST: ProductCategories/Create
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,ProductName,ProductPrice,ShortDiscription,Rating,RatingCount,ProductCategoryId")] Product product)
+        public ActionResult Create([Bind(Include = "ProductId,Name")] ProductCategory productCategory)
         {
             if (ModelState.IsValid)
             {
-                db.Products.Add(product);
+                db.ProductCategories.Add(productCategory);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ProductCategoryId = new SelectList(db.ProductCategories, "ProductId", "Name", product.ProductCategoryId);
-            return View(product);
+            return View(productCategory);
         }
 
-        // GET: Products/Edit/5
+        // GET: ProductCategories/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Products.Find(id);
-            if (product == null)
+            ProductCategory productCategory = db.ProductCategories.Find(id);
+            if (productCategory == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ProductCategoryId = new SelectList(db.ProductCategories, "ProductId", "Name", product.ProductCategoryId);
-            return View(product);
+            return View(productCategory);
         }
 
-        // POST: Products/Edit/5
+        // POST: ProductCategories/Edit/5
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в статье http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,ProductName,ProductPrice,ShortDiscription,Rating,RatingCount,ProductCategoryId")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductId,Name")] ProductCategory productCategory)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(product).State = EntityState.Modified;
+                db.Entry(productCategory).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ProductCategoryId = new SelectList(db.ProductCategories, "ProductId", "Name", product.ProductCategoryId);
-            return View(product);
+            return View(productCategory);
         }
 
-        // GET: Products/Delete/5
+        // GET: ProductCategories/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Products.Find(id);
-            if (product == null)
+            ProductCategory productCategory = db.ProductCategories.Find(id);
+            if (productCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(product);
+            return View(productCategory);
         }
 
-        // POST: Products/Delete/5
+        // POST: ProductCategories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Product product = db.Products.Find(id);
-            db.Products.Remove(product);
+            ProductCategory productCategory = db.ProductCategories.Find(id);
+            db.ProductCategories.Remove(productCategory);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

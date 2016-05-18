@@ -27,5 +27,10 @@ namespace CompTrade.Models
 
         [Display(Name = "Колличество оценок")]
         public int RatingCount { get; set; }
+
+        [Display(Name = "Категория")]
+        public int ProductCategoryId { get; set; }
+        [ForeignKey("ProductCategoryId")]
+        public virtual ProductCategory ProductCategory { get; set; }
     }
 }

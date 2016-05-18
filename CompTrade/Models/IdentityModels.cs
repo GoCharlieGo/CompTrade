@@ -36,6 +36,7 @@ namespace CompTrade.Models
         public DbSet<Product> Products{ get; set; }
         public DbSet<ProductSpecification> ProductSpecifications{ get; set; }
         public DbSet<Icon> Icon { get; set; }
-        public DbSet<ProductIcon> ProductIcon{ get; set; }
+        public DbSet<ProductIcon> ProductIcon { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
     }
 }

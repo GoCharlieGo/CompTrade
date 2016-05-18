@@ -13,7 +13,7 @@ namespace CompTrade.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201605171941511_ProductModels"; }
+            get { return "201605180056535_ProductModels"; }
         }
         
         string IMigrationMetadata.Source
